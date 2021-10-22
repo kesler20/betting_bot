@@ -26,7 +26,7 @@ def error_handler_decorator(func, *a, **kw):
             except Exception:
                 try:
                     input_field = driver.find_element_by_id('password')
-                    input_field.send_keys('utomiwill@20')
+                    input_field.send_keys('password')
                 except Exception:
                     input_field = driver.find_element_by_class_name(a[2]) #send the classname as first input and the keys to the input field as the second  a = [normal_input, attribute, value]
                     input_field.send_keys(a[3])
@@ -93,6 +93,6 @@ time.sleep(3)
 
 
 input_operations('uchekesla@gmail.com','//*[@id="username"]/div[1]/div[2]','username','uchekesla@gmail.com') 
-input_operations('utomiwill@20','//*[@id="password"]/div[1]/div[2]/input',"password",'utomiwill@20') 
+input_operations('password','//*[@id="password"]/div[1]/div[2]/input',"password",'password') 
 click_button('/html/body/div[12]/div/div/div/div/div/div/section/div/div[2]/div[2]/form/div/button')
 time.sleep(3)
